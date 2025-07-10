@@ -1,6 +1,10 @@
 DON'T EDIT THIS FILE!
 
+<<<<<<< HEAD
 traits1
+=======
+generics1
+>>>>>>> 05c1c8a (errors)
 
 intro1
 intro2
@@ -51,5 +55,14 @@ hashmaps3
 options1
 options2
 options3
+<<<<<<< HEAD
 generics1
 generics2
+=======
+errors1
+errors2
+errors3
+errors4
+errors5
+errors6
+>>>>>>> 05c1c8a (errors)
