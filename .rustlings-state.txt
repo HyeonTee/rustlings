@@ -1,7 +1,7 @@
 DON'T EDIT THIS FILE!
 
-traits1
-generics1
+quiz3
+
 intro1
 intro2
 variables1
@@ -51,11 +51,16 @@ hashmaps3
 options1
 options2
 options3
-generics1
-generics2
 errors1
 errors2
 errors3
 errors4
 errors5
 errors6
+generics1
+generics2
+traits1
+traits2
+traits3
+traits4
+traits5
