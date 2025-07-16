@@ -5,9 +5,9 @@
 // - Modules
 // - Enums
 //
-// Let's build a little machine in the form of a function. As input, we're going
-// to give a list of strings and commands. These commands determine what action
-// is going to be applied to the string. It can either be:
+// Let's build a little machine in the form of a function. As input, we're going to give a list of strings and commands. 
+// These commands determine what action is going to be applied to the string.
+// It can either be:
 // - Uppercase the string
 // - Trim the string
 // - Append "bar" to the string a specified amount of times
@@ -27,7 +27,32 @@ mod my_module {
     use super::Command;
 
     // TODO: Complete the function as described above.
-    // pub fn transformer(input: ???) -> ??? { ??? }
+    pub fn transformer(input: Vec<(String, Command)>) -> Vec<String> {
+        let mut output: Vec<String> = Vec::new();
+        
+        for (input, command) in input {
+            // match (input, command) {
+            //     (input, Command::Uppercase) => output.push(input.to_uppercase()),
+            //     (input, Command::Trim) => output.push(input.trim().to_string()),
+            //     (mut input, Command::Append(n)) => {
+            //         for _ in 0..n {
+            //             input.push_str("bar")
+            //         }
+            //         output.push(input)
+            //     },
+            // }
+            
+            let new_string = match command {
+                Command::Uppercase => input.to_uppercase(),
+                Command::Trim => input.trim().to_string(),
+                Command::Append(n) => input + &"bar".repeat(n),
+            };
+            
+            output.push(new_string);
+        }
+        
+        output
+    }
 }
 
 fn main() {
@@ -37,7 +62,7 @@ fn main() {
 #[cfg(test)]
 mod tests {
     // TODO: What do we need to import to have `transformer` in scope?
-    // use ???;
+    use super::my_module::transformer;
     use super::Command;
 
     #[test]
